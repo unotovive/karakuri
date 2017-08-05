@@ -12,4 +12,14 @@
       {{talk.content}}
     </ion-item>
   </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-80>
+        <ion-input type="text" [(ngModel)]="content" placeholder="投稿内容を入力"></ion-input>
+      </ion-col>
+      <ion-col width-20>
+        <button ion-button (click)="addTalk()">投稿</button>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

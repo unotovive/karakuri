@@ -7,9 +7,16 @@ import {AngularFire, FirebaseListObservable} from 'angularfire2';
 })
 export class HomePage {
   talks: FirebaseListObservable<any>;
- 
+  content: string;
   constructor(public navCtrl: NavController, angularFire: AngularFire) {
     this.talks = angularFire.database.list('/talks');
+  }
+  addTalk() {
+    this.talks.push({
+      name: "名無しさん",
+      content: this.content
+    });
+    this.content = "";
   }
  
 }

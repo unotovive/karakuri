@@ -10,7 +10,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = {
   apiKey: 'AIzaSyBUEeovsuf55U8tUmBLpeOnwvoWcwe-p14',
@@ -19,6 +18,7 @@ export const firebaseConfig = {
   storageBucket: 'karakuri-attend.appspot.com',
   messagingSenderId: '627296270394'
 };
+
 
 
 @NgModule({
@@ -31,7 +31,8 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
