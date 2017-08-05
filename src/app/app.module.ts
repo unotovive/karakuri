@@ -11,6 +11,16 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireModule } from 'angularfire2';
+export const firebaseConfig = {
+  apiKey: 'AIzaSyBUEeovsuf55U8tUmBLpeOnwvoWcwe-p14',
+  authDomain: 'karakuri-attend.firebaseapp.com',
+  databaseURL: 'https://karakuri-attend.firebaseio.com',
+  storageBucket: 'karakuri-attend.appspot.com',
+  messagingSenderId: '627296270394'
+};
+
+
 @NgModule({
   declarations: [
     MyApp,
